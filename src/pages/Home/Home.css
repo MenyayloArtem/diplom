@@ -1,0 +1,30 @@
+.home-main-info {
+    height: 600px;
+    background-image: url("../../../public/school.jpg");
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-main-info__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.inner-text {
+    margin-top: 50px;
+}
+
+.gradient-button {
+    margin-top: 50px;
+    height: 60px;
+    min-width: 200px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
