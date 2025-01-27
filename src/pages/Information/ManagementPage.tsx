@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainInfo from "../../components/InfoBlocks/MainInfo.tsx";
 import InfoBlock from "../../components/InfoBlock.tsx";
 import UserInfoBlock from "../../components/InfoBlocks/KeyValueInfoBlock.tsx";
 import Card from "../../components/Card/Card.tsx";
+// @ts-ignore
+import director from "../../assets/director.jpg"
+// @ts-ignore
+import z1 from "../../assets/zam1.jpg"
+// @ts-ignore
+import z2 from "../../assets/zam2.jpg"
+// @ts-ignore
+import r1 from "../../assets/r1.jpg"
+// @ts-ignore
+import r2 from "../../assets/r2.jpg"
+// @ts-ignore
+import r3 from "../../assets/r3.jpg"
 
 const ManagementPage: React.FC = () => {
+  useEffect(() => {
+    console.log(`${process.env.PUBLIC_URL}`)
+  }, [])
   return (
     <div className="ManagementPage">
       <UserInfoBlock
         header="Солодкова Наталия Валентиновна"
         title="Директор школы"
-        image={<img alt="director" src="/director.jpg" />}
+        image={<img alt="director" src={director} />}
         info={[
           {
             key: "Телефон",
@@ -32,7 +47,7 @@ const ManagementPage: React.FC = () => {
         <UserInfoBlock
           header="Легостаева Вита Александровна"
           title="Заместитель директора по учебно-воспитательной работе, учитель"
-          image={<img alt="director" src="/zam1.jpg" />}
+          image={<img alt="director" src={z1}/>}
           info={[
             {
               key: "Телефон",
@@ -51,7 +66,7 @@ const ManagementPage: React.FC = () => {
         <UserInfoBlock
           header="Чмутова Лилия Анатольевна"
           title="Заместитель директора по учебно-воспитательной работе"
-          image={<img alt="director" src="/zam2.jpg" />}
+          image={<img alt="director" src={z2} />}
           info={[
             {
               key: "Телефон",
@@ -73,21 +88,22 @@ const ManagementPage: React.FC = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Card
-          img="/r1.jpg"
+          img={r1}
           title="Крюкова Анжела Викторовна"
           body="Учитель русского языка и литературы "
         />
 
         <Card
-          img="/r2.jpg"
+          img={r2}
           title="Скороходова Анжелика Игоревна"
           body="Учитель английского языка"
         />
         <Card
-          img="/r3.jpg"
+          img={r3}
           title="Берестовая Эллина Вячеславовна"
           body="Учитель математики"
         />
+        {`${process.env.PUBLIC_URL}`}
       </div>
     </div>
   );

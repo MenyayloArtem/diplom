@@ -1,6 +1,6 @@
 .home-main-info {
     height: 600px;
-    background-image: url("../../../public/school.jpg");
+    background-image: url("../../assets/school.jpg");
     /* background-position: center; */
     background-size: cover;
     background-repeat: no-repeat;
