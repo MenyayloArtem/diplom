@@ -5,14 +5,14 @@ import App from './App.tsx';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from "./store/index.ts"
-import { BrowserRouter } from 'react-router';
+import { BrowserRouter, HashRouter } from 'react-router';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </Provider>
 );
 
