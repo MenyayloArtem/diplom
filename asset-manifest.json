@@ -1,16 +1,28 @@
 {
   "files": {
     "main.css": "/MenyayloArtem/diplom/static/css/main.2cd322b7.css",
-    "main.js": "/MenyayloArtem/diplom/static/js/main.c0b246e8.js",
+    "main.js": "/MenyayloArtem/diplom/static/js/main.747a0357.js",
     "static/js/453.1dc6cd3a.chunk.js": "/MenyayloArtem/diplom/static/js/453.1dc6cd3a.chunk.js",
+    "static/media/zam2.jpg": "/MenyayloArtem/diplom/static/media/zam2.ee771234c3734f85172b.jpg",
+    "static/media/zam1.jpg": "/MenyayloArtem/diplom/static/media/zam1.8d18975ed30a1d8f8700.jpg",
+    "static/media/r2.jpg": "/MenyayloArtem/diplom/static/media/r2.676926e4ee2fdda78326.jpg",
+    "static/media/r3.jpg": "/MenyayloArtem/diplom/static/media/r3.ced0a13b35bdae9315d7.jpg",
+    "static/media/r1.jpg": "/MenyayloArtem/diplom/static/media/r1.31bdb85880f43d78e4a2.jpg",
     "static/media/school.jpg": "/MenyayloArtem/diplom/static/media/school.6c392f4a64c8b7ffc639.jpg",
+    "static/media/zn.jpg": "/MenyayloArtem/diplom/static/media/zn.2794909b1a8617370069.jpg",
+    "static/media/book.jpg": "/MenyayloArtem/diplom/static/media/book.1a496145a2c8b14bff8e.jpg",
+    "static/media/education3.jpg": "/MenyayloArtem/diplom/static/media/education3.f374505e75e97c01c7c2.jpg",
+    "static/media/education2.jpg": "/MenyayloArtem/diplom/static/media/education2.ffc74781b036aefce1e2.jpg",
+    "static/media/director.jpg": "/MenyayloArtem/diplom/static/media/director.ae5dd65d0bf0b82b07d2.jpg",
+    "static/media/school2.jpg": "/MenyayloArtem/diplom/static/media/school2.4fa06edff3661c4eb2cd.jpg",
+    "static/media/education1.jpg": "/MenyayloArtem/diplom/static/media/education1.7a3cc63e341f67f9a0b8.jpg",
     "index.html": "/MenyayloArtem/diplom/index.html",
     "main.2cd322b7.css.map": "/MenyayloArtem/diplom/static/css/main.2cd322b7.css.map",
-    "main.c0b246e8.js.map": "/MenyayloArtem/diplom/static/js/main.c0b246e8.js.map",
+    "main.747a0357.js.map": "/MenyayloArtem/diplom/static/js/main.747a0357.js.map",
     "453.1dc6cd3a.chunk.js.map": "/MenyayloArtem/diplom/static/js/453.1dc6cd3a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2cd322b7.css",
-    "static/js/main.c0b246e8.js"
+    "static/js/main.747a0357.js"
   ]
 }
