@@ -25,7 +25,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
           isImageLeft ? "md:flex-row-reverse" : "md:flex-row"
         } bg-white shadow-md rounded-lg overflow-hidden`}
       >
-        <div className="md:w-2/3 sm:w-full p-6">
+        <div className={`${image ? "md:w-2/3 " : ""} sm:w-full p-6`}>
           {header && (
             <h2 className="text-2xl text-left font-semibold mb-4 text-gray-800">
               {header}

@@ -3,29 +3,18 @@ import MainInfo from "../../components/InfoBlocks/MainInfo.tsx";
 import InfoBlock from "../../components/InfoBlock.tsx";
 import UserInfoBlock from "../../components/InfoBlocks/KeyValueInfoBlock.tsx";
 import Card from "../../components/Card/Card.tsx";
-// @ts-ignore
-import director from "../../assets/director.jpg"
-// @ts-ignore
-import z1 from "../../assets/zam1.jpg"
-// @ts-ignore
-import z2 from "../../assets/zam2.jpg"
-// @ts-ignore
-import r1 from "../../assets/r1.jpg"
-// @ts-ignore
-import r2 from "../../assets/r2.jpg"
-// @ts-ignore
-import r3 from "../../assets/r3.jpg"
+import { NavLink } from "react-router";
 
 const ManagementPage: React.FC = () => {
   useEffect(() => {
-    console.log(`${process.env.PUBLIC_URL}`)
-  }, [])
+    console.log(`${process.env.PUBLIC_URL}`);
+  }, []);
   return (
     <div className="ManagementPage">
       <UserInfoBlock
         header="Солодкова Наталия Валентиновна"
         title="Директор школы"
-        image={<img alt="director" src={director} />}
+        image={<img alt="director" src="./director.jpg" />}
         info={[
           {
             key: "Телефон",
@@ -47,7 +36,7 @@ const ManagementPage: React.FC = () => {
         <UserInfoBlock
           header="Легостаева Вита Александровна"
           title="Заместитель директора по учебно-воспитательной работе, учитель"
-          image={<img alt="director" src={z1}/>}
+          image={<img alt="director" src="./zam1.jpg" />}
           info={[
             {
               key: "Телефон",
@@ -66,7 +55,7 @@ const ManagementPage: React.FC = () => {
         <UserInfoBlock
           header="Чмутова Лилия Анатольевна"
           title="Заместитель директора по учебно-воспитательной работе"
-          image={<img alt="director" src={z2} />}
+          image={<img alt="director" src="./zam2.jpg" />}
           info={[
             {
               key: "Телефон",
@@ -81,29 +70,41 @@ const ManagementPage: React.FC = () => {
             { key: "Часы приёма", value: "8:00 - 16:00" },
           ]}
         />
-
-        <div className="w-full text-2xl my-4 font-bold">
-          Руководители структурных подразделений и филиалов
-        </div>
+      </div>
+      <div className="w-full text-2xl my-4 font-bold">
+        Руководители структурных подразделений и филиалов
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Card
-          img={r1}
+          img="./r1.jpg"
           title="Крюкова Анжела Викторовна"
           body="Учитель русского языка и литературы "
         />
 
         <Card
-          img={r2}
+          img="./r2.jpg"
           title="Скороходова Анжелика Игоревна"
           body="Учитель английского языка"
         />
         <Card
-          img={r3}
+          img="./r3.jpg"
           title="Берестовая Эллина Вячеславовна"
           body="Учитель математики"
         />
-        {`${process.env.PUBLIC_URL}`}
+      </div>
+      <div className="w-full text-2xl my-4 font-bold">Коллегиальные органы</div>
+      <div className="w-full grid md:grid-cols-3 sm:grid-cols-1 gap-4 my-4 text-gray-900 text-xl font-semibold text-center">
+        <div className="bg-gray-100 rounded-xl shadow-md p-12">
+          <NavLink to={"/information/management/methodical_council"}>Методический совет</NavLink>
+        </div>
+        <div className="bg-gray-100 rounded-xl shadow-md p-12">
+        <NavLink to={"/information/management/parent_council"}>Родительский совет</NavLink>
+
+        </div>
+        <div className="bg-gray-100 rounded-xl shadow-md p-12">
+        <NavLink to={"/information/management/pedagogical_council"}>Педагогический совет</NavLink>
+
+        </div>
       </div>
     </div>
   );

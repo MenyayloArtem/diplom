@@ -34,8 +34,8 @@ const NavbarLink : React.FC<Props> = ({ text, to }) => {
     end
     className={({ isActive }) =>
       isActive || active
-        ? 'text-white font-semibold'
-        : 'hover:text-white'
+        ? 'font-semibold'
+        : 'hover:text-blue-500'
     }
   >
     { text }

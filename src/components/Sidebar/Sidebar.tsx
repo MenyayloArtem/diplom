@@ -9,8 +9,6 @@ import SidebarNavItem from "./SidebarNavItem.tsx";
 export interface INavItem {
   name: string;
   path: string;
-  icon: React.ReactNode;
-  articles?: Omit<INavItem, "articles" | "icon">[];
 }
 
 const Sidebar = () => {
@@ -41,7 +39,7 @@ const Sidebar = () => {
             </div>
         {navigation.map((item) => (
           <div className="block" key={item.name}>
-            <SidebarNavItem item={item} extended={isOpen}/>
+            <SidebarNavItem item={item} />
           </div>
         ))}
       </nav>

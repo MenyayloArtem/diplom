@@ -1,7 +1,5 @@
 import React from "react";
 import InfoBlock from "../InfoBlock.tsx";
-// @ts-ignore
-import school from "../../assets/school.jpg"
 
 const MainInfo : React.FC = () => {
     const test = `Краткое название: ГБОУ "Школа № 41 г.о. Горловка".  
@@ -20,7 +18,7 @@ const MainInfo : React.FC = () => {
       position: "left",
       component: (
         <div className="overflow-hidden">
-          <img src={school} alt="school" className="rounded-lg" />
+          <img src="https://i.postimg.cc/fyszQx00/school-min.jpg" alt="school" className="rounded-lg" />
         </div>
       ),
     }}

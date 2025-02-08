@@ -2,12 +2,6 @@ import React from "react";
 import MainInfo from "../../components/InfoBlocks/MainInfo.tsx";
 import InfoBlock from "../../components/InfoBlock.tsx";
 import KeyValueInfoBlock from "../../components/InfoBlocks/KeyValueInfoBlock.tsx";
-// @ts-ignore
-import ed1 from "../../assets/education1.jpg"
-// @ts-ignore
-import ed2 from "../../assets/education2.jpg"
-// @ts-ignore
-import ed3 from "../../assets/education3.jpg"
 
 const EducationPage: React.FC = () => {
   return (
@@ -16,7 +10,7 @@ const EducationPage: React.FC = () => {
         <KeyValueInfoBlock
           header="Начальное образование"
           title="Образовательная программа начального общего образования (для 1-4 классов)"
-          image={<img className="w-full" src={ed1} alt="education1" />}
+          image={<img className="w-full" src="./education1.jpg" alt="education1" />}
           info={[
             {
               key: "Форма обучения:",
@@ -30,7 +24,7 @@ const EducationPage: React.FC = () => {
         <KeyValueInfoBlock
           header="Среднее основное образование"
           title="Образовательная программа основного общего образования (для 5–9 классов)"
-          image={<img src={ed2} alt="education1" />}
+          image={<img src="./education2.jpg" alt="education1" />}
           info={[
             {
               key: "Форма обучения:",
@@ -44,7 +38,7 @@ const EducationPage: React.FC = () => {
         <KeyValueInfoBlock
           header="Среднее основное образование"
           title="Образовательная программа среднего общего образования (для 10–11 классов)"
-          image={<img src={ed3} alt="education1" />}
+          image={<img src="./education3.jpg" alt="education1" />}
           info={[
             {
               key: "Форма обучения:",

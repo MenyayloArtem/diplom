@@ -1,11 +1,9 @@
 import React from "react";
-// @ts-ignore
-import schoolImg from "../../assets/school.jpg"
 
 const NewsItem : React.FC = () => {
     return <div className="news-item flex flex-col sm:flex-row bg-white shadow-md p-4">
     <div className="news-item__left w-full sm:w-1/3">
-      <img src={schoolImg} alt="image" className="news-item__image" />
+      <img src="./school.jpg" alt="image" className="news-item__image" />
     </div>
     <div className="news-item__right w-full sm:w-2/3 text-start p-4">
       <div className="news-item__title font-bold text-xl">

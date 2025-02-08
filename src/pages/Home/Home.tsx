@@ -6,12 +6,6 @@ import NewsItem from "../../components/NewsItem/NewsItem.tsx";
 import Button from "../../components/ui/Button/Button.tsx";
 import { NavLink } from "react-router";
 import MainInfo from "../../components/InfoBlocks/MainInfo.tsx";
-// @ts-ignore
-import school2Img from "../../assets/school2.jpg"
-// @ts-ignore
-import zn from "../../assets/zn.jpg"
-// @ts-ignore
-import book from "../../assets/book.jpg"
 const Home: React.FC = () => {
   const history = `История ГБОУ "Школа № 41 г.о. Горловка" начинается в 1938 году, когда была открыта семилетняя школа № 41, рассчитанная на 100 учеников, в поселке шахты имени Румянцева. Во время немецко-фашистской оккупации в здании школы размещался штаб оккупантов. Один из учеников, Василий Шеин, проявил мужество и поджег штаб врага, олицетворяя стойкость советского народа в борьбе с оккупантами.
 
@@ -21,7 +15,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-1 gap-8 mb-4">
+      <div className="grid grid-cols-1 gap-8 mb-8 pt-16">
         <div className="home-main-info w-full">
           <div className="home-main-info__inner">
             <div className="inner-text text-xl md:text-3xl text-white font-bold text-center p-8">
@@ -30,7 +24,7 @@ const Home: React.FC = () => {
               Горловка» Донецкой Народной Республики
             </div>
 
-            <NavLink to={"/information/main"}>
+            <NavLink to={"/information"}>
               <button className="gradient-button bg-gradient-to-br from-blue-500 to-cyan-500 text-white text-lg font-bold rounded-full">
                 Читать подробнее
               </button>
@@ -60,7 +54,7 @@ const Home: React.FC = () => {
             component: (
               <div className="p-4 overflow-hidden">
                 <img
-                  src={school2Img}
+                  src="./school2.jpg"
                   alt="school"
                   className="w-full rounded-lg"
                 />
@@ -77,19 +71,19 @@ const Home: React.FC = () => {
             <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4">
               <EventCard
                 body="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, delectus? Consequuntur adipisci in illum ratione voluptatum voluptatem suscipit. Corrupti ratione eius eos iusto quisquam officiis culpa consectetur nam sequi minus?"
-                img={book}
+                img="./book.jpg"
                 title="Знакток русского Донбасса"
               />
 
               <EventCard
                 body="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, delectus? Consequuntur adipisci in illum ratione voluptatum voluptatem suscipit. Corrupti ratione eius eos iusto quisquam officiis culpa consectetur nam sequi minus?"
-                img={zn}
+                img="./zn.jpg"
                 title="Разговоры о важном"
               />
 
               <EventCard
                 body="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, delectus? Consequuntur adipisci in illum ratione voluptatum voluptatem suscipit. Corrupti ratione eius eos iusto quisquam officiis culpa consectetur nam sequi minus?"
-                img={school2Img}
+                img="./school.jpg"
                 title="Школа"
               />
             </div>

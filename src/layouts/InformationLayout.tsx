@@ -4,8 +4,7 @@ import { Outlet } from "react-router";
 
 const Information : React.FC = () => {
     return <div className="">
-        <Sidebar />
-        <div className="pl-16">
+        <div className="pt-16">
             <Outlet />
         </div>
     </div>
