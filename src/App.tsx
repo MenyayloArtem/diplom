@@ -13,6 +13,8 @@ import Content from "./pages/Information/Content.tsx";
 import ParentsCouncil from "./pages/Information/Management/ParentsCouncil.tsx";
 import MethodicalCouncil from "./pages/Information/Management/MethodicalCouncil.tsx";
 import PedCouncil from "./pages/Information/Management/PedCouncil.tsx";
+import NewsWidget from "./widgets/NewsWidget/NewsWidget.tsx";
+import EventsWidget from "./widgets/EventsWidget/EventsWidget.tsx";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path="/news" element={<NewsWidget />}/>
+          <Route path="/events" element={<EventsWidget />}/>
           <Route path="/information" element={<InformationLayout />}>
           <Route path="/information" element={<Content />}/>
             <Route path="/information/main" element={<InformationPage />}/>

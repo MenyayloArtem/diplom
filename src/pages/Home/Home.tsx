@@ -1,11 +1,10 @@
 import React from "react";
 import InfoBlock from "../../components/InfoBlock.tsx";
 import "./Home.css";
-import EventCard from "../../components/Card/Card.tsx";
-import NewsItem from "../../components/NewsItem/NewsItem.tsx";
-import Button from "../../components/ui/Button/Button.tsx";
 import { NavLink } from "react-router";
 import MainInfo from "../../components/InfoBlocks/MainInfo.tsx";
+import EventWidget from "../../widgets/EventsWidget/EventsWidget.tsx";
+import NewsWidget from "../../widgets/NewsWidget/NewsWidget.tsx";
 const Home: React.FC = () => {
   const history = `История ГБОУ "Школа № 41 г.о. Горловка" начинается в 1938 году, когда была открыта семилетняя школа № 41, рассчитанная на 100 учеников, в поселке шахты имени Румянцева. Во время немецко-фашистской оккупации в здании школы размещался штаб оккупантов. Один из учеников, Василий Шеин, проявил мужество и поджег штаб врага, олицетворяя стойкость советского народа в борьбе с оккупантами.
 
@@ -63,44 +62,9 @@ const Home: React.FC = () => {
           }}
         />
 
-        <section className="events my-4">
-          <div className="title text-3xl font-bold text-center">
-            Мероприятия
-          </div>
-          <div className="mt-8">
-            <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4">
-              <EventCard
-                body="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, delectus? Consequuntur adipisci in illum ratione voluptatum voluptatem suscipit. Corrupti ratione eius eos iusto quisquam officiis culpa consectetur nam sequi minus?"
-                img="./book.jpg"
-                title="Знакток русского Донбасса"
-              />
+        <EventWidget sliced/>
 
-              <EventCard
-                body="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, delectus? Consequuntur adipisci in illum ratione voluptatum voluptatem suscipit. Corrupti ratione eius eos iusto quisquam officiis culpa consectetur nam sequi minus?"
-                img="./zn.jpg"
-                title="Разговоры о важном"
-              />
-
-              <EventCard
-                body="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, delectus? Consequuntur adipisci in illum ratione voluptatum voluptatem suscipit. Corrupti ratione eius eos iusto quisquam officiis culpa consectetur nam sequi minus?"
-                img="./school.jpg"
-                title="Школа"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="news my-4">
-          <div className="text-3xl font-bold text-center">Новости</div>
-          <div className="mt-8">
-            <div className="grid grid-cols-1 gap-4">
-              <NewsItem />
-              <NewsItem />
-            </div>
-
-            <Button text="Смотреть все новости" className="mt-4" />
-          </div>
-        </section>
+        <NewsWidget sliced/>
       </div>
     </div>
   );
