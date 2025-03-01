@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MenyayloArtem/diplom/static/css/main.42d65897.css",
-    "main.js": "/MenyayloArtem/diplom/static/js/main.9c9a762c.js",
+    "main.css": "/MenyayloArtem/diplom/static/css/main.84126540.css",
+    "main.js": "/MenyayloArtem/diplom/static/js/main.82a5cab9.js",
     "static/js/453.1dc6cd3a.chunk.js": "/MenyayloArtem/diplom/static/js/453.1dc6cd3a.chunk.js",
     "index.html": "/MenyayloArtem/diplom/index.html",
-    "main.42d65897.css.map": "/MenyayloArtem/diplom/static/css/main.42d65897.css.map",
-    "main.9c9a762c.js.map": "/MenyayloArtem/diplom/static/js/main.9c9a762c.js.map",
+    "main.84126540.css.map": "/MenyayloArtem/diplom/static/css/main.84126540.css.map",
+    "main.82a5cab9.js.map": "/MenyayloArtem/diplom/static/js/main.82a5cab9.js.map",
     "453.1dc6cd3a.chunk.js.map": "/MenyayloArtem/diplom/static/js/453.1dc6cd3a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.42d65897.css",
-    "static/js/main.9c9a762c.js"
+    "static/css/main.84126540.css",
+    "static/js/main.82a5cab9.js"
   ]
 }
