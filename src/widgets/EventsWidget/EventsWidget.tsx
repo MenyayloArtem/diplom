@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import EventCard from "../../components/Card/Card.tsx";
 import Api from "../../api/Api.ts";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,14 +12,18 @@ interface Props {
 const EventsWidget: React.FC<Props> = ({ sliced }) => {
   const events = useSelector((state: RootState) => state.app.events);
   const dispatch = useDispatch();
+  const [error, setError] = useState(false)
 
   useEffect(() => {
-    if (!events.length) {
+    if (!events.length && !error) {
       Api.fetchEvents().then((res) => {
         dispatch(AppActions.setEvents(res));
-      });
+      })
+      .catch((e) => {
+        setError(true)
+      })
     }
-  }, [dispatch, events]);
+  }, [events, error]);
 
   return (
     <section className="events my-4">

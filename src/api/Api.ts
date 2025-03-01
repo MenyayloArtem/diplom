@@ -1,42 +1,70 @@
 import { INews } from "../components/NewsItem/NewsItem";
-import apiUrl from "../shared/apiUrl.ts";
+
+const MASTER_KEY =
+  "$2a$10$JsufKSlnnpnWueXgtxkNd.Uj4JwayaPLyEze.oQLmBW0P2VhAqdn.";
+const ACCESS_KEY =
+  "$2a$10$PHndlndf8poKy3jj4bRuZOH0nMdmQ3mfg8XXfhWOUnEjP.zyzxOaa";
 
 export default abstract class Api {
-  static async fetchNews(): Promise<INews[]> {
-    let res = await fetch("/api/news");
-    let html = await res.text();
-    let parser = new DOMParser();
-    let doc = parser.parseFromString(html, "text/html");
-    let objects = Array.from(doc.querySelectorAll(".object-item"));
+  private static async fetchBin(id: string) {
+    try {
+      let data = await fetch(`https://api.jsonbin.io/v3/b/${id}`, {
+        headers: {
+          "X-Master-Key": MASTER_KEY,
+          "X-Access-Key": ACCESS_KEY,
+        },
+      });
 
-    let parsedNews: INews[] = objects.map((item) => ({
-      title: item.querySelector(".object-item-title")!.textContent!,
-      text: item.querySelector(".object-item-announce")?.textContent as any,
-      image:
-        apiUrl +
-        "netcat_files" +
-        (item.querySelector(".image img") as any).src.split("netcat_files")[1],
-    }));
-    return parsedNews;
+      let res = await data.json();
+
+      console.log(res);
+      if (data.status >= 400) {
+        throw new Error("Events error");
+      }
+
+      return res.record;
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
-  static async fetchEvents() : Promise<INews[]> {
-    let res = await fetch("/api/events");
-    let html = await res.text();
-    let parser = new DOMParser();
-    let doc = parser.parseFromString(html, "text/html");
-    let objects = Array.from(doc.querySelectorAll(".object"));
+  static async fetchNews(): Promise<INews[]> {
+    return await Api.fetchBin("67c31df3ad19ca34f8149ad4");
 
-    let parsedEvents = objects.map((item) => ({
-        title: item.querySelector(".object-info .name")!.textContent!,
-        text: item.querySelector(".object-info .description")?.textContent as any,
-        image:
-          apiUrl +
-          "netcat_files" +
-          (item.querySelector(".object-image img") as any).src.split("netcat_files")[1],
-      }));
+    // var o = Array.from(document.querySelectorAll(".object-item"));
 
-    console.log(parsedEvents)
-    return parsedEvents
+    // var parsedNews = o.map((item) => {
+    //   console.log(item)
+    //   try {
+    //     return {
+    //     title: item.querySelector(".object-item-title").textContent,
+    //     text: item.querySelector(".object-item-announce").textContent,
+    //     image:
+    //       "https://gorlovka-shkola-41.gosuslugi.ru/" +
+    //       "netcat_files" +
+    //       (item.querySelector(".image img")).src.split("netcat_files")[1]
+    //   }
+    //   } catch (e) {
+    //     return ""
+    //   }
+    // })
+    // console.log(parsedNews)
+  }
+
+  static async fetchEvents(): Promise<INews[]> {
+    return await Api.fetchBin("67c31498e41b4d34e49ede46");
+
+    //   var o = Array.from(document.querySelectorAll(".object"));
+
+    // var parsedEents = o.map((item) => ({
+    //     title: item.querySelector(".object-info .name").textContent.trim(),
+    //     text: item.querySelector(".object-info .description").textContent.trim(),
+    //     image:
+    //       "https://gorlovka-shkola-41.gosuslugi.ru/" +
+    //       "netcat_files" +
+    //       (item.querySelector(".object-image img")).src.split("netcat_files")[1],
+    //   }));
+
+    // console.log((parsedEents))
   }
 }

@@ -6,7 +6,7 @@ const MainLayout : React.FC = () => {
     return (
         <div className="w-full">
             <Navbar />
-            <div className="content max-w-screen-xl mx-auto px-4 xl:px-0 pt-28">
+            <div className="content max-w-screen-xl mx-auto px-4 xl:px-0 md:pt-32 pt-40">
                 <Outlet />
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/ui/Button/Button.tsx";
 import NewsItem from "../../components/NewsItem/NewsItem.tsx";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,12 +13,16 @@ interface Props {
 const NewsWidget: React.FC<Props> = ({ sliced }) => {
   const news = useSelector((state: RootState) => state.app.news);
   const dispatch = useDispatch();
+  const [error, setError] = useState(false)
 
   useEffect(() => {
-    if (!news.length) {
-      Api.fetchNews().then((news) => dispatch(AppActions.setNews(news as any)));
+    if (!news.length && !error) {
+      Api.fetchNews().then((news) => dispatch(AppActions.setNews(news as any)))
+      .catch((e) => {
+        setError(true)
+      })
     }
-  }, [dispatch, news]);
+  }, [dispatch, news, error]);
 
   return (
     <section className="news my-4">
