@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppActions, RootState } from "../../store/index.ts";
 import Api from "../../api/Api.ts";
 import { GridLoader } from "react-spinners";
+import { Link } from "react-router";
 
 interface Props {
   sliced?: boolean;
@@ -40,7 +41,7 @@ const NewsWidget: React.FC<Props> = ({ sliced }) => {
           </div>
         )}
 
-        {sliced && <Button text="Смотреть все новости" className="mt-4" />}
+        {sliced && <Link to={"/news"}><Button text="Смотреть все новости" className="mt-4" /></Link>}
       </div>
     </section>
   );
