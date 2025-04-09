@@ -15,6 +15,7 @@ import MethodicalCouncil from "./pages/Information/Management/MethodicalCouncil.
 import PedCouncil from "./pages/Information/Management/PedCouncil.tsx";
 import NewsWidget from "./widgets/NewsWidget/NewsWidget.tsx";
 import EventsWidget from "./widgets/EventsWidget/EventsWidget.tsx";
+import GIAPage from "./pages/Gia/GIAPage.tsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="/news" element={<NewsWidget />}/>
+          <Route path="/gia" element={<GIAPage />}/>
           <Route path="/events" element={<EventsWidget />}/>
           <Route path="/information" element={<InformationLayout />}>
           <Route path="/information" element={<Content />}/>

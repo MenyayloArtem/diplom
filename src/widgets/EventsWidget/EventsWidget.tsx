@@ -5,9 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppActions, RootState } from "../../store/index.ts";
 import { GridLoader } from "react-spinners";
 
-interface Props {
-  sliced?: boolean;
-}
+interface Props {sliced?: boolean;}
 
 const EventsWidget: React.FC<Props> = ({ sliced }) => {
   const events = useSelector((state: RootState) => state.app.events);
@@ -33,10 +31,8 @@ const EventsWidget: React.FC<Props> = ({ sliced }) => {
           <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4">
             {events.slice(0, sliced ? 3 : 100).map((item, i) => (
               <EventCard
-                title={item.title}
-                body={item.text}
-                img={item.image}
-                key={i}
+                title={item.title} body={item.text}
+                img={item.image} key={i}
               />
             ))}
           </div>
@@ -49,5 +45,4 @@ const EventsWidget: React.FC<Props> = ({ sliced }) => {
     </section>
   );
 };
-
 export default EventsWidget;

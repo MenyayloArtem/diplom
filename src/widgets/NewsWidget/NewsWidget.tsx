@@ -40,7 +40,6 @@ const NewsWidget: React.FC<Props> = ({ sliced }) => {
             <GridLoader color="#666" />
           </div>
         )}
-
         {sliced && <Link to={"/news"}><Button text="Смотреть все новости" className="mt-4" /></Link>}
       </div>
     </section>
