@@ -3,10 +3,11 @@ import { NavLink, useLocation } from "react-router";
 
 interface Props {
     text : string,
-    to : string
+    to : string,
+    hoverColor? : string
 }
 
-const NavbarLink : React.FC<Props> = ({ text, to }) => {
+const NavbarLink : React.FC<Props> = ({ text, to, hoverColor }) => {
   const location = useLocation()
   const [active, setActive] = useState(false)
 
@@ -35,7 +36,7 @@ const NavbarLink : React.FC<Props> = ({ text, to }) => {
     className={({ isActive }) =>
       isActive || active
         ? 'font-semibold'
-        : 'hover:text-blue-500'
+        : hoverColor ? hoverColor : 'hover:text-blue-500'
     }
   >
     { text }
